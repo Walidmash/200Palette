@@ -1,26 +1,48 @@
 
 (function main() {
   var myInput = document.getElementById('myInput');
-  myInput.onkeyup = function(){
+  myInput.addEventListener('input', function(){
     myChange(myInput.value , (myRes)=>{
-      console.log('walid test:',myRes);
+      var temp = '';
+      myRes.forEach((color)=>{
+        temp +='<option value="' + color + '">';
+      });
+      if (temp != '') {
+        document.getElementById('colors').innerHTML=temp;
+      }
     });
-  }
+  });
 })();
 
 function myChange(myVal, fn) {
-  var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var myJSONRemote = JSON.parse(this.responseText);
-            fn(myJSONRemote);
-          //   myJSONRemote.data.map(function(myData) {
-          //
-          // )};
+    var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var myJSONRemote = JSON.parse(this.responseText);
+              fn(myJSONRemote);
+            //   myJSONRemote.data.map(function(myData) {
+            //
+            // )};
+        }
       }
-    }
-      xhttp.open("POST", "/valchange", true);
-      xhttp.send(myVal);
+        xhttp.open("POST", "/valchange", true);
+        xhttp.send(myVal);
+
+}
+//not ready yet !!!!!!!!!!!!!!!!
+function mySearch(myVal, fn) {
+    var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var myJSONRemote = JSON.parse(this.responseText);
+              fn(myJSONRemote);
+            //   myJSONRemote.data.map(function(myData) {
+            //
+            // )};
+        }
+      }
+        xhttp.open("POST", "/valchange", true);
+        xhttp.send(myVal);
 
 }
 /*

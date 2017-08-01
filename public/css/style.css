@@ -13,6 +13,13 @@ svg{
   margin: 0 auto;
   display: block;
 }
+circle{
+  transition: all 1s;
+}
+circle:hover{
+  cursor: pointer;
+  width: 300px;
+}
 @media (max-width:600px) {
   svg{
     height : auto;

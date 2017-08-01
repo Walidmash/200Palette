@@ -13,7 +13,10 @@
   <header>
     <div class="container">
       <form id="inputForm" action="index.html" method="post">
-        <input type="text" name="myInput" id="myInput" value="" onchange="myChange(this.value)">
+        <input list="colors" type="text" name="myInput" id="myInput" value="">
+        <datalist id="colors">
+
+        </datalist>
         <input type="submit" name="submit" value="Submit">
       </form>
     </div>

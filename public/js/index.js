@@ -3,24 +3,25 @@
   var myInput = document.getElementById('myInput');
   myInput.onkeyup = function(){
     myChange(myInput.value , (myRes)=>{
-      console.log(myRes);
+      console.log('walid test:',myRes);
     });
   }
 })();
 
-function myChange(myVal) {
+function myChange(myVal, fn) {
   var xhttp = new XMLHttpRequest();
-    var myInput = document.getElementsByClassName("search-query")[0].value;
-      myImgs = "";
       xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             var myJSONRemote = JSON.parse(this.responseText);
-            myJSONRemote.data.map(function(myData) {
-              fn(myJSONRemote);
-          }
-      };
+            fn(myJSONRemote);
+          //   myJSONRemote.data.map(function(myData) {
+          //
+          // )};
+      }
+    }
       xhttp.open("POST", "/valchange", true);
       xhttp.send(myVal);
+
 }
 /*
     var searchInput = document.querySelector('.search-query');

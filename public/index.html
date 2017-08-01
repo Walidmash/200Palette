@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="author" content="200">
-  <meta name="description" content="200 team palette picker">
-  <meta name="viewport" content="initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <title>200Palette</title>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <form id="inputForm" action="index.html" method="post">
-        <input list="colors" type="text" name="myInput" id="myInput" value="">
-        <datalist id="colors">
 
-        </datalist>
-        <input type="submit" name="submit" value="Submit">
-      </form>
-    </div>
-  </header>
-  <div id="myPic">
-    <div class="container">
-      <!-- walid -->
-      <?xml version="1.0" encoding="UTF-8"?>
-      <svg enable-background="new 0 0 1283.089 1669.326" version="1.1" viewBox="0 0 1283.089 1669.326" xmlns="http://www.w3.org/2000/svg">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="200">
+    <meta name="description" content="200 team palette picker">
+    <meta name="viewport" content="initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>200Palette</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+        </div>
+    </header>
+    <div class="allPage">
+        <div id="myPic">
+            <div class="container">
+                <!-- walid -->
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg enable-background="new 0 0 1283.089 1669.326" version="1.1" viewBox="0 0 1283.089 1669.326" xmlns="http://www.w3.org/2000/svg">
        <circle cx="278.55" cy="371.53" r="47.802" fill="#C7B299"/>
        <circle cx="888.21" cy="1140.2" r="48.532" fill="#0f0"/>
        <circle cx="247.79" cy="870.8" r="48.297" fill="#8C6239"/>
@@ -2505,14 +2503,38 @@
        <circle cx="104.73" cy="554.58" r="2.008" fill="#8C6239"/>
        <circle cx="97.734" cy="558.33" r="2.008" fill="#998675"/>
       </svg>
+            </div>
+        </div>
+        <div class="paletteDiv">
+
+            <h2 id="choose"> Choose your favourite color: </h2>
+            <form id="inputForm" action="index.html" method="post">
+
+                <input list="colors" type="text" name="myInput" id="myInput" value="">
+                <datalist id="colors">
+
+        </datalist>
+                <input class="subBtn" type="submit" name="submit" value="Submit">
+            </form>
+            <ul>
+                <li style="background: #800000;"> </li>
+            </ul>
+
+            <ul>
+                <li style="background:#b30000;"> </li>
+            </ul>
+            <ul>
+                <li style="background: #ff0000;"> </li>
+            </ul>
+            <ul>
+                <li style="background: #ff8080;"> </li>
+            </ul>
+        </div>
     </div>
-  </div>
-
-  <div class="paletteDiv">
-    <!-- ajour -->
-  </div>
-
-  <script src="js/index.js"></script>
+    <footer>
+        <p> Copyright &copy; <span>200</span></p>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,24 @@
+{
+  "name": "200palette",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG2/200Palette.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG2/200Palette/issues"
+  },
+  "homepage": "https://github.com/FACG2/200Palette#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "tape": "^4.8.0"
+  }
+}

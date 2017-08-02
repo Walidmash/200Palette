@@ -29,7 +29,7 @@
         });
       }else if(sugestions.length){
         note.innerHTML = '<h4 class="error">Sorry :( We dont provide this color : '+ myColor + '</h4>'+
-                          '<h5>do you mean '+ sugestions[0] +' ?</h5>'
+                          '<h4>do you mean '+ sugestions[0] +' ?</h4>'
       }else {
         note.innerHTML = '<h4 class="error">Sorry :( We dont provide this color : '+ myColor + '</h4>';
       }

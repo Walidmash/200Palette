@@ -19,7 +19,14 @@
       }
     });
   });
+  /*Reset SVG colors to gray*/
+  setTimeout(()=>{
+    const allCircles = Array.from(document.querySelectorAll('circle'));
+    allCircles.forEach((oneCircle)=>{
+        oneCircle.setAttribute("fill", "gray");
 
+    });
+  },0);
   /*Painting the picture*/
   setTimeout(()=>{
     const allCircles = Array.from(document.querySelectorAll('circle'));

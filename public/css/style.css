@@ -137,9 +137,22 @@ footer {
     text-align: center;
 }
 
-@media (max-width:600px) {
+@media (max-width:780px) {
     svg {
         height: auto;
         width: 80%;
+    }
+    .paletteDiv{
+      width: 100%;
+    }
+    .allPage{
+      flex-direction:column-reverse;
+      height: auto;
+    }
+    ul{
+      display: flex;
+    }
+    #myPic {
+      width: 100%;
     }
 }

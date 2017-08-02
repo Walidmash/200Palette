@@ -19,7 +19,7 @@ h4 {
     color: white;
     font-family: 'Courgette', cursive;
     font-size: 25px;
-    margin-left: 40%;
+    text-align: center;
 }
 
 
@@ -112,7 +112,7 @@ svg {
 
 #myInput {
     border: 1px solid black;
-    ;
+    width: 80%;
     padding: 10px;
     font-size: 18px;
 }

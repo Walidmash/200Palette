@@ -78,7 +78,9 @@ svg {
     display: block;
     margin-top: 1.5%;
 }
-
+.selected{
+  border:2px dotted gray;
+}
 .paletteDiv {
     padding: 2%;
     width: 20%;

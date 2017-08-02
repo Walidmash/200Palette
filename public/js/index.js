@@ -25,11 +25,11 @@
       const myColor = event.target.firstElementChild.value;
       if (sugestions.indexOf(myColor) !=-1) { // verify that we have this color
         mySearch(myColor , (colorValue)=>{
-          createpaletts(colorValue);
+          document.getElementById('palettesLis').innerHTML=createpaletts(colorValue);
         });
       }else if(sugestions.length){
         note.innerHTML = '<h4 class="error">Sorry :( We dont provide this color : '+ myColor + '</h4>'+
-                          '<h4>do you mean '+ sugestions[0] +' ?</h4>'
+                        '<h4>do you mean '+ sugestions[0] +' </h4>'
       }else {
         note.innerHTML = '<h4 class="error">Sorry :( We dont provide this color : '+ myColor + '</h4>';
       }
@@ -70,8 +70,14 @@ function mySearch(myVal, fn) {
 
 function createpaletts(rgbColor) {
   // convert rgb to HSL
+  var resultColors="";
   const hslColor = rgbToHsl(rgbColor[0] , rgbColor[1] , rgbColor[2]);
   console.log('hsl ' , hslColor);
+  //creating 10 palettes
+  for (let i = 0; i < 8; i++) {
+    resultColors += '<li style="background: hsl('+hslColor[0]+','+hslColor[1]+'%,'+14.2*i+'%)"> </li>'
+  }
+  return resultColors;
 }
 
 /* Conver RGB to HSL color format*/

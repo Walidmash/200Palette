@@ -3,18 +3,41 @@
     padding: 0;
 }
 
+body {
+    background: #1C232D;
+}
+
 h2 {
+    margin-left: 2%;
+    color: #ecf0f1;
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+}
+
+h4 {
     margin-left: 2%;
     color: white;
     font-family: 'Courgette', cursive;
-    font-size: 30px;
+    font-size: 25px;
+    margin-left: 40%;
 }
+
+
+/* header {
+    width: 100%;
+    color: black;
+    background-color: white;
+    font-family: 'Acme', sans-serif;
+    align-items: center;
+    text-align: center;
+} */
 
 .allPage {
     display: flex;
+    margin-left: 3%;
     flex-direction: row-reverse;
     height: 97vh;
-    border: 2px solid black;
+    width: 95%;
 }
 
 ul {
@@ -38,28 +61,41 @@ ul li {
 }
 
 #myPic {
-    padding: 2%;
-    width: 70%;
-    background: #f2f2f2;
+    /* padding: 10%; */
+    width: 80%;
+    background: #1C232D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+svg {
+    background: #ecf0f1;
+    border-radius: 1%;
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1.5%;
 }
 
 .paletteDiv {
     padding: 2%;
-    width: 30%;
-    background: #16a085;
-    border-right: solid 1px black;
+    width: 20%;
+    background: #272F3D;
+    margin-right: 2%;
 }
 
 .subBtn {
-    margin-left: 0.5%;
-    padding: 10px;
+    margin-left: 1%;
+    padding: 2px;
     background: #7f8c8d;
     color: white;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
-    border-left: 3px solid #34495e;
+    /* border-left: 3px solid #34495e; */
 }
 
 .subBtn:hover {
@@ -67,15 +103,16 @@ ul li {
 }
 
 #inputForm {
+    display: flex;
     margin-top: 2%;
     margin-left: 2%;
 }
 
 #myInput {
-    border: 1.5px solid #34495e;
+    border: 1px solid black;
     ;
     padding: 10px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -85,26 +122,10 @@ ul li {
     margin: 0 auto;
 } */
 
-svg {
-    height: auto;
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-circle {
-    transition: all 1s;
-}
-
-circle:hover {
-    cursor: pointer;
-    width: 300px;
-}
-
 footer {
     width: 100%;
-    color: white;
-    background-color: #34495e;
+    color: black;
+    background-color: white;
     font-family: 'Acme', sans-serif;
     align-items: center;
     text-align: center;

@@ -42,6 +42,7 @@
       event.preventDefault();
       const myColor = event.target.firstElementChild.value;
       if (sugestions.indexOf(myColor) !=-1) { // verify that we have this color
+        note.innerHTML="<h4>Pick color from the palette and then start painting.</h4>";
         mySearch(myColor , (colorValue)=>{
           document.getElementById('palettesLis').innerHTML=createpaletts(colorValue);
             var allLis = Array.from(document.querySelectorAll('#palettesLis li'));
@@ -50,8 +51,9 @@
                 const selectedDiv = document.getElementsByClassName('selected')[0];
                 if (selectedDiv != undefined) {
                   selectedDiv.classList.remove('selected');
-                  onePalette.classList.add('selected');
+
                 }
+                onePalette.classList.add('selected');
                 pickedColor =  onePalette.style.backgroundColor;
               });
               /*Allowing coloring the background*/

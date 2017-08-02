@@ -133,3 +133,6 @@ function rgbToHsl(r, g, b){
     }
     return [Math.floor(h * 360), Math.floor(s * 100), Math.floor(l * 100)];
 }
+module.exports={
+  rgbToHsl:rgbToHsl
+}

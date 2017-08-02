@@ -58,6 +58,7 @@ ul li {
     background: #eee;
     font-size: 25px;
     transition: 0.2s;
+    margin: 0 auto;
 }
 
 #myPic {

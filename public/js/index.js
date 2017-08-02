@@ -20,9 +20,6 @@ function myChange(myVal, fn) {
             if (this.readyState == 4 && this.status == 200) {
               var myJSONRemote = JSON.parse(this.responseText);
               fn(myJSONRemote);
-            //   myJSONRemote.data.map(function(myData) {
-            //
-            // )};
         }
       }
         xhttp.open("POST", "/valchange", true);

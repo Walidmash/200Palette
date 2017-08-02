@@ -5,7 +5,7 @@ function router(req , res) {
   if (url === '/') {
       handlers.homeHandler(req, res);
   }
-  else if (url === '/css/style.css' || url === '/js/index.js') {
+  else if (url === '/css/style.css' || url === '/js/index.js' || url === '/js/svgs.js') {
     handlers.publicHandler(req, res);
 
   }else if (url === '/valchange') {

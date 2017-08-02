@@ -17,15 +17,12 @@ function homeHandler (req, res) {
 function sugestHandler(req,res) {
   var allTheData = '';
   req.on('data', function (chunkOfData) {
-
-      allTheData += chunkOfData;
+    allTheData += chunkOfData;
   });
-
   req.on('end', function () {
     var resu= backendScript.suggest(allTheData);
-  res.end(JSON.stringify(resu));
+    res.end(JSON.stringify(resu));
   });
-
 }
 
 function searchHandler(req,res) {

@@ -2,7 +2,8 @@
   const myInput = document.getElementById('myInput');
   const submitColorForm = document.getElementById('inputForm');
   const colorsOptions = document.getElementById('colors');
-  const note = document.getElementsByClassName('note')[0];
+  var note = document.getElementsByClassName('note')[0];
+  var pickedColor = "";
   var sugestions = [];
       /*sugest while typing*/
   myInput.addEventListener('input', function(){
@@ -18,6 +19,23 @@
       }
     });
   });
+
+  /*Painting the picture*/
+  setTimeout(()=>{
+    const allCircles = Array.from(document.querySelectorAll('circle'));
+    allCircles.forEach((oneCircle)=>{
+      oneCircle.addEventListener('click',()=>{
+        if (pickedColor =="") {
+          note.innerHTML="<h4>Please choose color from the palette";
+        }else
+          oneCircle.setAttribute("fill", pickedColor);
+      });
+    });
+  },0);
+  // Array.prototype.slice.call(document.querySelector('circle')).addEventListener('click',()=> {
+  //   console.log('clicked');
+  // })
+
 /*Submit the color name and comfirm the changes*/
   if (submitColorForm) {
     submitColorForm.addEventListener('submit', (event) => {
@@ -26,6 +44,22 @@
       if (sugestions.indexOf(myColor) !=-1) { // verify that we have this color
         mySearch(myColor , (colorValue)=>{
           document.getElementById('palettesLis').innerHTML=createpaletts(colorValue);
+            var allLis = Array.from(document.querySelectorAll('#palettesLis li'));
+            allLis.forEach((onePalette)=>{
+              onePalette.addEventListener('click' ,()=>{
+                const selectedDiv = document.getElementsByClassName('selected')[0];
+                if (selectedDiv != undefined) {
+                  selectedDiv.classList.remove('selected');
+                  onePalette.classList.add('selected');
+                }
+                pickedColor =  onePalette.style.backgroundColor;
+              });
+              /*Allowing coloring the background*/
+              // const mySvg =document.querySelector('svg')
+              // mySvg.addEventListener('click',()=>{
+              //   mySvg.style.backgroundColor = pickedColor;
+              // });
+            });
         });
       }else if(sugestions.length){
         note.innerHTML = '<h4 class="error">Sorry :( We dont provide this color : '+ myColor + '</h4>'+
@@ -33,7 +67,6 @@
       }else {
         note.innerHTML = '<h4 class="error">Sorry :( We dont provide this color : '+ myColor + '</h4>';
       }
-
     });
   }
 
@@ -72,7 +105,6 @@ function createpaletts(rgbColor) {
   // convert rgb to HSL
   var resultColors="";
   const hslColor = rgbToHsl(rgbColor[0] , rgbColor[1] , rgbColor[2]);
-  console.log('hsl ' , hslColor);
   //creating 10 palettes
   for (let i = 0; i < 8; i++) {
     resultColors += '<li style="background: hsl('+hslColor[0]+','+hslColor[1]+'%,'+14.2*i+'%)"> </li>'

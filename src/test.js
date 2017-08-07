@@ -4,7 +4,8 @@ var backendScript = require('./backendScript.js');
 test('Testing Suggestion Function is working', function(t) {
 var sugName='re';
   var actual = backendScript.suggest(sugName);
-  var expected = ['red', 'rebecdasasdcapurple'];
+  var expected = ['red', 'rebecdasasdddcapurple'];
+
   t.deepEqual(actual, expected, 'One should equal one');
   t.end();
 });

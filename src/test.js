@@ -5,6 +5,7 @@ test('Testing Suggestion Function is working', function(t) {
 var sugName='re';
   var actual = backendScript.suggest(sugName);
   var expected = ['red', 'rebecdasasdddcapurple'];
+
   t.deepEqual(actual, expected, 'One should equal one');
   t.end();
 });
